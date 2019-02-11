@@ -17,6 +17,7 @@ class HangpersonGame
   
   def guess(letter)
     @guesses << letter
+    return true
   end
 
   # You can test it by running $ bundle exec irb -I. -r app.rb
