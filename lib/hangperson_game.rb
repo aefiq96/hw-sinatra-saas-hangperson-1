@@ -16,7 +16,13 @@ class HangpersonGame
   end
   
   def guess(letter)
-    @guesses << letter
+    #for guesses that included
+    if @word.include? letter
+      @guesses << letter
+    else
+    #this for wrong guesses
+     @wrong_guesses << letter
+    end
     return true
   end
 
