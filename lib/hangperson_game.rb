@@ -16,6 +16,13 @@ class HangpersonGame
   end
   
   def guess(letter)
+  
+    # throws an error when empty
+    if letter == nil || !(letter.class == String && letter =~ /^[A-z]$/i)
+      raise ArgumentError
+    end
+    
+    #make everything lowercase
     letter.downcase!
     
     #make a check for repeats
