@@ -16,6 +16,10 @@ class HangpersonGame
   end
   
   def guess(letter)
+    #make a check for repeats
+    if @guesses.include?(letter) || @wrong_guesses.include?(letter)
+      return false
+    end
     #for guesses that included
     if @word.include? letter
       @guesses << letter
