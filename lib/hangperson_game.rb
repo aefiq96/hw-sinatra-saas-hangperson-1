@@ -16,6 +16,8 @@ class HangpersonGame
   end
   
   def guess(letter)
+    letter.downcase!
+    
     #make a check for repeats
     if @guesses.include?(letter) || @wrong_guesses.include?(letter)
       return false
